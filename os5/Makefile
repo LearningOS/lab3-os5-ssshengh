@@ -21,7 +21,9 @@ CHAPTER ?= 5
 TEST ?= $(CHAPTER)
 BASE ?= 1
 
-build: env $(KERNEL_BIN)
+#build: env $(KERNEL_BIN)
+build: $(KERNEL_BIN)
+
 
 env:
 	(rustup target list | grep "riscv64gc-unknown-none-elf (installed)") || rustup target add $(TARGET)
